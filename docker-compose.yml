@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  api-envia-email:
+    build: .
+    ports:
+      - "10001:4545"
+    environment:
+      NODE_ENV: production
+    command: ["npm", "start"]
