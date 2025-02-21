@@ -48,7 +48,7 @@ app
 
     const attachments = req.files.map((file) => ({
       filename: file.originalname,
-      content: file.buffer,
+      path: file.path,
     }));
 
     const info = await transporter.sendMail({
@@ -76,7 +76,7 @@ app
       });
     });
     
-    console.log('FIM');
+    // console.log('FIM');
   }
 })
 
